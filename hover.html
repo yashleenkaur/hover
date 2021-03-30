@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		.a{
+			height: 300px;
+			width: 300px;
+			margin-left: 550px;
+			margin-top: 150px;
+			background: linear-gradient(to bottom left, green, transparent, blue);
+			padding-top: 10px;
+			padding-left: 10px;
+			transition: transform 1s;
+			position: relative;
+		}
+		.b{
+			height: 190px;
+			width: 290px;
+			background-color: #181818;
+			margin-left: 560px;
+			margin-top: -300px;
+			position: absolute;
+			/*color: black;*/
+			color: rgb(80, 80, 80);
+			text-align: center;
+			padding-top: 100px; 
+			font-family: cursive;
+		}
+		
+		.rotate{
+			transform: rotate(180deg);
+			/*position: absolute;*/
+		}
+	</style>
+</head>
+<body style="background-color: black;">
+<div class="a" id="aa">
+	
+
+</div>
+<div class="b" id="bb"><h2>HOVER ME</h2></div>
+<script type="text/javascript">
+	$('#bb').hover(function(){
+		$("#aa").addClass("rotate");
+	},function(){
+		$("#aa").removeClass("rotate");
+	});
+</script>
+</body>
+</html>
